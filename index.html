@@ -1,94 +1,38 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Özür Mektubu</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8e8e8;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            margin: 0;
-            padding: 10px;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            max-width: 90%;
-            width: 400px;
-        }
-        h2 {
-            color: #d9534f;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-top: 20px;
-        }
-        button {
-            font-size: 18px;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            transition: 0.3s;
-            min-width: 100px;
-        }
-        #evet {
-            background-color: #d9534f;
-            color: white;
-            position: relative;
-        }
-        #hayir {
-            background-color: #5cb85c;
-            color: white;
-        }
-        #hayir:hover {
-            background-color: #4cae4c;
-        }
-        p {
-            font-size: 16px;
-            color: #333;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .message {
+      font-size: 24px;
+      max-width: 600px;
+      padding: 20px;
+      animation: breathe 3s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%   { transform: scale(1); opacity: 0.8; }
+      50%  { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Seni kırdım mı?</h2>
-        <div class="buttons">
-            <button id="evet">Evet</button>
-            <button id="hayir">Hayır</button>
-        </div>
-        <p id="mesaj"></p>
-    </div>
-    
-    <script>
-        const evetButton = document.getElementById("evet");
-        const hayirButton = document.getElementById("hayir");
-        const mesaj = document.getElementById("mesaj");
-
-        evetButton.addEventListener("mouseover", () => {
-            const x = Math.random() * (window.innerWidth - 100);
-            const y = Math.random() * (window.innerHeight - 50);
-            evetButton.style.left = `${x}px`;
-            evetButton.style.top = `${y}px`;
-        });
-
-        hayirButton.addEventListener("click", () => {
-            mesaj.innerText = "Kırılmanı yasaklıyorum! (Şaka, istemeden kırdıysam özür dilerim ❤️)";
-        });
-    </script>
+  <div class="message">
+    Yine geldin demek fakat üzgünüm artık bu site bir anlam ifade etmiyor :)
+  </div>
 </body>
 </html>
